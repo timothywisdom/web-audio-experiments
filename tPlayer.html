@@ -1,0 +1,32 @@
+<html>
+<head>
+	<style type="text/css">
+		#canvas {
+			width: 1500px;
+			height: 80px;
+			border: 1px solid #000;
+			margin-top: 20px;
+		}	
+	</style>
+</head>
+<body>
+
+	<div id="app-container">
+		<input type="text" id="tPlayer-url-input" value="http://images.dev.freshrotation.com/mp3/test.mp3" />
+		<button type="button" id="tPlayer-load" onclick="tPlayer.loadAudioFromGUI();">Load</button>
+		<button type="button" id="tPlayer-play" onclick="tPlayer.playAudioFromGUI();">Play</button>
+		<button type="button" id="tPlayer-stop" onclick="tPlayer.stopAudioFromGUI();">Stop</button>
+		<div>
+			<canvas id="canvas"></canvas>
+		</div>
+	</div>
+
+	<script src="tPlayer.js"></script>
+	<script>
+		tPlayer.init();
+		tPlayer.loadAudioFromGUI();
+		//tPlayer.playSoundFromUrl("https://api.soundcloud.com/tracks/310486393/stream?client_id=JlZIsxg2hY5WnBgtn3jfS0UYCl0K8DOg");
+	</script>
+
+</body>
+</html>
